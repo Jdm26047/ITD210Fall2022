@@ -1,0 +1,131 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  }
+
+body { 
+ 
+  font-family: 'Heebo', serif;
+  background-image: url("dinnerplate.png");
+  background-size: cover;
+  /* background-color : rgba(146, 145, 145, 0.); */
+  
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  overflow: hidden;
+  background-color: #f1f1f1;
+  padding: 20px 20px;
+}
+
+.logo {
+  font-size: 20px;
+  padding: 7.5px 10px 7.5px 0;
+}
+
+
+.mid-right,
+.right, {
+  list-style-type: none;
+}
+
+nav > a {
+  padding: 15px 15px;
+}
+
+.column > ul > li {
+  list-style-type: none;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 4px;
+}
+
+
+/* Create four equal columns that sits next to each other */
+.column  {
+  flex: 25%;
+  max-width: 25%;
+  padding: 0 4px;
+}
+
+.column {
+  margin-top: 8px;
+  vertical-align: middle;
+  width: 100%;
+}
+
+/* Responsive layout - makes a two column-layout instead of four columns */
+@media screen and (max-width: 800px) {
+  .column {
+    flex: 50%;
+    max-width: 50%;
+  }
+}
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .column {
+    flex: 100%;
+    max-width: 100%;
+  }
+}
+
+/* 
+ul {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+li {
+  height: 40vh;
+  flex-grow: 1;
+}
+
+li:last-child {
+
+  flex-grow: 10;
+}
+
+img {
+  max-height: 100%;
+  min-width: 100%;
+  object-fit: cover;
+  vertical-align: bottom;
+} */
+
+
+/*
+html {:;}
+head {:;}
+ body {:;}
+h1 {:;}
+nav {:;}
+ul {:;}
+li {:;}
+h2 {:;}
+p {:;}
+aside {:;}
+section {:;}
+footer {:;}
+
+
+.nav {:;}
+.nav-right {:;}
+.all {:;}
+.wrapper {:;}
+.section {:;}
+
+
+#header {:;}
+#p1 {:;}
+#p2 {:;}
+#p3 {:;} */
+
+
