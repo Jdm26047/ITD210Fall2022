@@ -9,20 +9,25 @@ body {
   font-family: 'Heebo', serif;
   background-image: url("dinnerplate.png");
   background-size: cover;
+    background-color: rgba(237, 237, 237, 0.536);
+  background-blend-mode: lighten;
+   background-size: cover; 
   /* background-color : rgba(146, 145, 145, 0.); */
   
 }
 
-/* header {
+div.logo > a > img {
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  overflow: hidden;
-  background-color: #f1f1f1;
-  padding: 20px 20px;
-  height: 50px;
-} */
+  width: 16%;
+   /* height:auto;  */
+  margin-top: .8em;
+  margin-left: .8em;
+  padding: 7.5px 10px 7.5px 0;
+}
+
+
+/* 
+
 
 .header {
   display: flex;
@@ -30,8 +35,8 @@ body {
   align-items: center;
   justify-content: space-between;
   background-color: #f1f1f1;
-  /*background: linear-gradient(to left, #f46b45, #eea849);*/
-  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  /background: linear-gradient(to left, #f46b45, #eea849);/
+  / W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ /
   color: #FFF;
   height: 50px;
   padding: 1em;
@@ -73,7 +78,7 @@ body {
   overflow: hidden;
 }
 
-.nav-toogle-label {
+.nav-toggle-label {
   display: none;
   height: 100%;
   width: 30px;
@@ -87,9 +92,9 @@ body {
   display: none;
 }
 
-.nav-button,
-.nav-button::before,
-.nav-button::after {
+span,
+span::before,
+span::after {
   display: block;
   background-color: #fff;
   position: absolute;
@@ -99,43 +104,35 @@ body {
   border-radius: 2px;
 }
 
-.nav-button::before {
+span::before {
   content: '';
   margin-top: -8px;
 }
 
-.nav-button::after {
+span::after {
   content: '';
   margin-top: 8px;
 }
 
-#nav-toggle:checked + .nav-toogle-label .nav-button::before {
+#nav-toggle:checked + .nav-toggle-label span::before {
   margin-top: 0px;
   transform: rotate(405deg);
 }
 
-#nav-toggle:checked + .nav-toogle-label .nav-button {
+#nav-toggle:checked + .nav-toggle-label span {
   background: rgba(255, 255, 255, 0);
 }
 
-#nav-toggle:checked + .nav-toogle-label .nav-button::after {
+#nav-toggle:checked + .nav-toggle-label span::after {
   margin-top: 0px;
   transform: rotate(-405deg);
-}
+} */
 
 /* .logo {
   font-size: 20px;
   padding: 7.5px 10px 7.5px 0;
 } */
 
-div.logo > a > img {
-  max-width: 40%;
-  /* height:auto; */
-  margin-top: .8em;
-  margin-left: .8em;
-  /* min-width: 15%; */
-  padding: 7.5px 10px 7.5px 0;
-}
 
 
 /*
@@ -233,11 +230,20 @@ nav a:hover {
 } */
 
 
+
+
+
+
+
+
+/* 
+
 @media (max-width: 700px) {
-  .nav-toogle-label {
+  .nav-toggle-label {
     display: flex;
   }
   .menu {
+    display: none;
     position: absolute;
     top: 0;
     margin-top: 50px;
@@ -298,56 +304,74 @@ nav a:hover {
   .menu > li:not(:last-child) {
     border-bottom: 1px solid #444;
   }
+} */
+
+
+/* Restaurant Menu */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1.5em;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-.column > ul > li {
-  list-style-type: none;
+.menu {
+  font-family: "Inter", sans-serif;
+  font-size: 14px;
 }
 
-.row {
+.menu-group-heading {
+  margin: 0;
+  padding-bottom: 1em;
+  border-bottom: 2px solid #ccc;
+}
+
+.menu-group {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5em;
+  padding: 1.5em 0;
+}
+
+.menu-item {
   display: flex;
-  flex-wrap: wrap;
-  padding: 0 4px;
-}
-/* Create four equal columns that sits next to each other */
-.column  {
-  flex: 25%;
-  max-width: 25%;
-  padding: 0 4px;
 }
 
-.column {
-  margin-top: 8px;
-  vertical-align: middle;
-  width: 100%;
+.menu-item-image {
+  width: 80px;
+  height: 80px;
+  flex-shrink: 0;
+  object-fit: cover;
+  margin-right: 1.5em;
 }
 
-/* Responsive layout - makes a two column-layout instead of four columns */
-@media screen and (max-width: 800px) {
-  .column {
-    flex: 50%;
-    max-width: 50%;
+.menu-item-text {
+  flex-grow: 1;
+}
+
+.menu-item-heading {
+  display: flex;
+  justify-content: space-between;
+  margin: 0;
+}
+
+.menu-item-name {
+  margin-right: 1.5em;
+}
+
+.menu-item-description {
+  line-height: 1.6;
+}
+@media screen and (min-width: 992px) {
+  .menu {
+    font-size: 16px;
   }
-}
 
-/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
-@media screen and (max-width: 600px) {
-  .column {
-    flex: 100%;
-    max-width: 100%;
+  .menu-group {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .menu-item-image {
+    width: 125px;
+    height: 125px;
   }
 }

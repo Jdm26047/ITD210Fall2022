@@ -1,31 +1,29 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>HTML Layout</title>
+        <title>HTML Layout6C</title>
         <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1">
-        <link href="css/styles_gallery.css" type="text/css" rel="stylesheet">
+        <link href="styles_gallery.css" type="text/css" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Heebo" rel="stylesheet"/>
     </head>
     <body>
         <header class="header">
-            <a href="homepage.html" class="logo">LOGO</a>
-            <nav class="mid">
-                <a href="" >Menu</a>
-                <a href="gallery_page.html" >Gallery</a>
-                <a href="" >Contact Us</a>
-                <a href="" >About</a>
-            </nav>
-            <!-- needs icons
-            <div class="mid-right" class="relative"> 
-                    <a href=""><img src="" alt="o"></a>
-                    <a href=""><img src="" alt=""></a>
-                    <a href=""><img src="" alt="></a>
-            </div> -->
-            <div class="right" class="relative"> 
-                <a href="#">ORDER</a>
-                <a href="#">CONTACT</a>          
+            <div class="logo">
+                <a href="homepage.html"><img src="logo_2.png" alt="LOGO"></a>
             </div>
-            </header>
+            <input id="nav-toggle" type="checkbox">
+            <label class="nav-toggle-label" for="nav-toggle"> 
+            <div class="nav-button"></div>
+            </label> 
+            <nav class="nav">
+                <ul class="menu">
+                    <li><a href="restaurant_menu.html" >Menu</a></li>
+                    <li><a href="gallery_page.html" >Gallery</a></li>
+                    <li><a href="#" >Contact Us</a></li>
+                    <li><a href="#" >About</a></li>
+                </ul>
+            </nav>  
+        </header>
             <div class="row">
               <div class="column">
                 <ul class="gallery">
